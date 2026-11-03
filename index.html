@@ -3,51 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevPortfolio Builder - Instant Live Preview</title>
+  <title>Pro DevPortfolio Builder</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="app-container">
-    <!-- CHAP PANEL: BOSHQRUV VA BLOKLAR -->
+    <!-- CHAP PANEL: BOSHQRUV VA INPUTLAR -->
     <div class="sidebar">
       <h2>🛠 Portfolio Builder</h2>
       <p class="subtitle">Ma'lumotlarni kiriting va jonli natijani ko'ring!</p>
 
-      <!-- HERO SECTION SOZLAMALARI -->
+      <!-- HERO SECTION -->
       <div class="control-card">
         <h3>1. Bosh sahifa (Hero)</h3>
         <label>Ism-sharifingiz:</label>
-        <input type="text" id="input-name" value="Ali Valiyev" placeholder="Masalan: Ali Valiyev">
+        <input type="text" id="input-name" value="Ali Valiyev">
         
         <label>Kasbingiz / Yo'nalishingiz:</label>
-        <input type="text" id="input-role" value="Frontend Developer" placeholder="Masalan: Frontend Developer">
+        <input type="text" id="input-role" value="Full-Stack Developer">
         
         <label>Qisqa shior (Bio):</label>
-        <textarea id="input-bio" rows="2">Zamonaviy va qulay veb-saytlar yarataman.</textarea>
+        <textarea id="input-bio" rows="2">Zamonaviy, tez va xavfsiz veb-saytlar hamda ilovalar yarataman.</textarea>
       </div>
 
-      <!-- SKILLS SECTION SOZLAMALARI -->
+      <!-- SKILLS SECTION -->
       <div class="control-card">
         <h3>2. Ko'nikmalar (Skills)</h3>
         <label>Texnologiyalar (vergul bilan):</label>
-        <input type="text" id="input-skills" value="HTML5, CSS3, JavaScript, React, Git" placeholder="HTML, CSS, JS...">
+        <input type="text" id="input-skills" value="HTML5, CSS3, JavaScript, React, Node.js, Git, Figma">
       </div>
 
-      <!-- PROJECTS SECTION SOZLAMALARI -->
+      <!-- DYNAMIC PROJECTS SECTION -->
       <div class="control-card">
         <h3>3. Loyihalar (Projects)</h3>
-        <label>Loyiha nomi:</label>
-        <input type="text" id="input-proj-title" value="E-Commerce Website">
-        <label>Loyiha haqida:</label>
-        <input type="text" id="input-proj-desc" value="Onlayn do'kon uchun qulay interfeys va savatcha tizimi.">
+        <div id="projects-inputs-container">
+          <!-- JS orqali dinamik loyiha inputlari tushadi -->
+        </div>
+        <button type="button" id="btn-add-project" class="btn-secondary">➕ Yangi loyiha qo'shish</button>
       </div>
 
-      <!-- CONTACT SECTION SOZLAMALARI -->
+      <!-- DYNAMIC EXPERIENCE SECTION -->
       <div class="control-card">
-        <h3>4. Aloqa (Contact)</h3>
-        <label>Telegram / Email:</label>
-        <input type="text" id="input-contact" value="@ali_dev | ali@example.com">
+        <h3>4. Ish Tajribasi (Experience)</h3>
+        <div id="exp-inputs-container">
+          <!-- JS orqali dinamik tajriba inputlari tushadi -->
+        </div>
+        <button type="button" id="btn-add-exp" class="btn-secondary">➕ Yangi tajriba qo'shish</button>
+      </div>
+
+      <!-- CONTACT SECTION -->
+      <div class="control-card">
+        <h3>5. Aloqa (Contact)</h3>
+        <label>Email:</label>
+        <input type="text" id="input-email" value="ali.dev@example.com">
+        <label>Telegram / LinkedIn / GitHub:</label>
+        <input type="text" id="input-social" value="Telegram: @ali_dev | GitHub: github.com/alidev">
       </div>
 
       <button id="btn-generate-code" class="btn-primary">📋 HTML & CSS Kodni Olish</button>
