@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR STYLES */
+.sidebar {
+  width: 380px;
+  background-color: #1e293b;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #334155;
+}
+
+.sidebar h2 {
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.control-card {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #334155;
+}
+
+.control-card h3 {
+  font-size: 1rem;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0369a1;
+}
+
+/* PREVIEW STYLES */
+.preview-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #020617;
+  padding: 20px;
+}
+
+.preview-header {
+  background-color: #1e293b;
+  padding: 10px 15px;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.preview-body {
+  flex: 1;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px;
+  padding: 40px;
+}
+
+/* PORTFOLIO TEMPLATE STYLES INSIDE PREVIEW */
+.pv-hero {
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pv-hero h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+}
+
+.pv-hero p.role {
+  font-size: 1.25rem;
+  color: #0284c7;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.pv-hero p.bio {
+  color: #64748b;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.pv-section {
+  padding: 30px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pv-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.pv-skills-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pv-skill-tag {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.pv-project-card {
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+/* MODAL STYLES */
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden { display: none; }
+
+.modal-content {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 10px;
+  width: 600px;
+  max-width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal-header button {
+  background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;
+}
+
+.modal-body textarea {
+  height: 120px;
+  margin-bottom: 15px;
+  font-family: monospace;
+}
