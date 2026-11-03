@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevPortfolio Builder - Instant Live Preview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- CHAP PANEL: BOSHQRUV VA BLOKLAR -->
+    <div class="sidebar">
+      <h2>🛠 Portfolio Builder</h2>
+      <p class="subtitle">Ma'lumotlarni kiriting va jonli natijani ko'ring!</p>
+
+      <!-- HERO SECTION SOZLAMALARI -->
+      <div class="control-card">
+        <h3>1. Bosh sahifa (Hero)</h3>
+        <label>Ism-sharifingiz:</label>
+        <input type="text" id="input-name" value="Ali Valiyev" placeholder="Masalan: Ali Valiyev">
+        
+        <label>Kasbingiz / Yo'nalishingiz:</label>
+        <input type="text" id="input-role" value="Frontend Developer" placeholder="Masalan: Frontend Developer">
+        
+        <label>Qisqa shior (Bio):</label>
+        <textarea id="input-bio" rows="2">Zamonaviy va qulay veb-saytlar yarataman.</textarea>
+      </div>
+
+      <!-- SKILLS SECTION SOZLAMALARI -->
+      <div class="control-card">
+        <h3>2. Ko'nikmalar (Skills)</h3>
+        <label>Texnologiyalar (vergul bilan):</label>
+        <input type="text" id="input-skills" value="HTML5, CSS3, JavaScript, React, Git" placeholder="HTML, CSS, JS...">
+      </div>
+
+      <!-- PROJECTS SECTION SOZLAMALARI -->
+      <div class="control-card">
+        <h3>3. Loyihalar (Projects)</h3>
+        <label>Loyiha nomi:</label>
+        <input type="text" id="input-proj-title" value="E-Commerce Website">
+        <label>Loyiha haqida:</label>
+        <input type="text" id="input-proj-desc" value="Onlayn do'kon uchun qulay interfeys va savatcha tizimi.">
+      </div>
+
+      <!-- CONTACT SECTION SOZLAMALARI -->
+      <div class="control-card">
+        <h3>4. Aloqa (Contact)</h3>
+        <label>Telegram / Email:</label>
+        <input type="text" id="input-contact" value="@ali_dev | ali@example.com">
+      </div>
+
+      <button id="btn-generate-code" class="btn-primary">📋 HTML & CSS Kodni Olish</button>
+    </div>
+
+    <!-- O'NG PANEL: LIVE PREVIEW -->
+    <div class="preview-container">
+      <div class="preview-header">
+        <span>🔴 🟡 🟢 Live Preview</span>
+      </div>
+      <div id="preview-area" class="preview-body">
+        <!-- JS orqali dinamik kontent yuklanadi -->
+      </div>
+    </div>
+  </div>
+
+  <!-- KODNI KO'RSATISH MODAL OYNASI -->
+  <div id="code-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Tayyor HTML & CSS Kodingiz</h3>
+        <button id="btn-close-modal">✖</button>
+      </div>
+      <div class="modal-body">
+        <h4>HTML Kod:</h4>
+        <textarea id="output-html" readonly></textarea>
+        <h4>CSS Kod:</h4>
+        <textarea id="output-css" readonly></textarea>
+      </div>
+      <button id="btn-copy-code" class="btn-primary">📋 Kodlarni Nusxalash</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
