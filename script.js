@@ -24,7 +24,7 @@ function updatePreview() {
   const skills = inputSkills.value.split(',').map(s => s.trim()).filter(s => s);
   const projTitle = inputProjTitle.value || 'Loyiha nomi';
   const projDesc = inputProjDesc.value || 'Loyiha tavsifi';
-  const contact = inputContact.value || 'Aloqa ma'lumotlari';
+  const contact = inputContact.value || "Aloqa ma'lumotlari"; // TO'G'RILANDI
 
   // Skills teglarini tayyorlash
   const skillsHtml = skills.map(s => `<span class="pv-skill-tag">${s}</span>`).join('');
