@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 /* SIDEBAR STYLES */
 .sidebar {
-  width: 380px;
+  width: 420px;
   background-color: #1e293b;
   padding: 20px;
   overflow-y: auto;
@@ -46,9 +46,32 @@ body {
 }
 
 .control-card h3 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #f1f5f9;
   margin-bottom: 10px;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 5px;
+}
+
+.dynamic-item {
+  background-color: #1e293b;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  position: relative;
+  border: 1px solid #334155;
+}
+
+.btn-remove {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  margin-top: 8px;
+  float: right;
 }
 
 label {
@@ -62,11 +85,11 @@ label {
 input, textarea {
   width: 100%;
   padding: 8px 12px;
-  background-color: #1e293b;
+  background-color: #0f172a;
   border: 1px solid #475569;
   border-radius: 6px;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 input:focus, textarea:focus {
@@ -87,9 +110,21 @@ input:focus, textarea:focus {
   margin-top: 10px;
 }
 
-.btn-primary:hover {
-  background-color: #0369a1;
+.btn-primary:hover { background-color: #0369a1; }
+
+.btn-secondary {
+  width: 100%;
+  padding: 8px;
+  background-color: #334155;
+  color: #38bdf8;
+  border: 1px dashed #38bdf8;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-top: 5px;
 }
+
+.btn-secondary:hover { background-color: #475569; }
 
 /* PREVIEW STYLES */
 .preview-container {
@@ -110,104 +145,90 @@ input:focus, textarea:focus {
 
 .preview-body {
   flex: 1;
-  background-color: #ffffff;
+  background-color: #f8fafc;
   color: #0f172a;
   overflow-y: auto;
   border-radius: 0 0 8px 8px;
   padding: 40px;
 }
 
-/* PORTFOLIO TEMPLATE STYLES INSIDE PREVIEW */
+/* PORTFOLIO TEMPLATE DESIGN INSIDE PREVIEW */
 .pv-hero {
   text-align: center;
-  padding: 40px 0;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.3);
+  margin-bottom: 30px;
 }
 
-.pv-hero h1 {
-  font-size: 2.5rem;
-  color: #0f172a;
-}
-
-.pv-hero p.role {
-  font-size: 1.25rem;
-  color: #0284c7;
-  font-weight: 600;
-  margin: 10px 0;
-}
-
-.pv-hero p.bio {
-  color: #64748b;
-  max-width: 500px;
-  margin: 0 auto;
-}
+.pv-hero h1 { font-size: 2.5rem; margin-bottom: 5px; }
+.pv-hero p.role { font-size: 1.2rem; opacity: 0.9; font-weight: 500; margin-bottom: 12px; }
+.pv-hero p.bio { font-size: 0.95rem; opacity: 0.85; max-width: 600px; margin: 0 auto; line-height: 1.5; }
 
 .pv-section {
-  padding: 30px 0;
-  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
 }
 
 .pv-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.3rem;
   color: #0f172a;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
 }
 
-.pv-skills-list {
+.pv-skills-grid {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.pv-skill-tag {
-  background-color: #e0f2fe;
+.pv-skill-card {
+  background: #f0f9ff;
   color: #0369a1;
-  padding: 6px 14px;
-  border-radius: 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
+  border: 1px solid #bae6fd;
 }
 
-.pv-project-card {
-  background-color: #f8fafc;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
+.pv-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
 }
+
+.pv-card {
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 10px;
+  border-left: 4px solid #0284c7;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.pv-card h3 { font-size: 1.05rem; color: #0f172a; margin-bottom: 6px; }
+.pv-card .sub-title { font-size: 0.85rem; color: #0284c7; font-weight: 600; margin-bottom: 8px; }
+.pv-card p { font-size: 0.9rem; color: #475569; line-height: 1.4; }
 
 /* MODAL STYLES */
 .modal {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; justify-content: center; align-items: center;
 }
-
 .hidden { display: none; }
-
 .modal-content {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 10px;
-  width: 600px;
-  max-width: 90%;
+  background: #1e293b; padding: 25px; border-radius: 10px; width: 600px; max-width: 90%;
 }
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.modal-header button {
-  background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;
-}
-
-.modal-body textarea {
-  height: 120px;
-  margin-bottom: 15px;
-  font-family: monospace;
-}
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.modal-header button { background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; }
+.modal-body textarea { height: 120px; margin-bottom: 15px; font-family: monospace; }
